@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/kayit">
+
+    <fragment
+        android:id="@+id/kayit"
+        android:name="com.example.fotografpaylasim.Kayit"
+        android:label="fragment_kayit"
+        tools:layout="@layout/fragment_kayit" >
+        <action
+            android:id="@+id/action_kayit_to_feed"
+            app:destination="@id/feed" />
+    </fragment>
+    <fragment
+        android:id="@+id/feed"
+        android:name="com.example.fotografpaylasim.feed"
+        android:label="fragment_feed"
+        tools:layout="@layout/fragment_feed" >
+        <action
+            android:id="@+id/action_feed_to_yukleme"
+            app:destination="@id/yukleme" />
+        <action
+            android:id="@+id/action_feed_to_kayit"
+            app:destination="@id/kayit" />
+    </fragment>
+    <fragment
+        android:id="@+id/yukleme"
+        android:name="com.example.fotografpaylasim.yukleme"
+        android:label="fragment_yukleme"
+        tools:layout="@layout/fragment_yukleme" >
+        <action
+            android:id="@+id/action_yukleme_to_feed"
+            app:destination="@id/feed" />
+    </fragment>
+</navigation>
